@@ -59,7 +59,7 @@ const Category = ({ category, products, slug }) => {
                             Пред.
                         </button>
 
-                        <span className="font-bold">{`${pageIndex} of ${
+                        <span className="font-bold">{`${pageIndex} из ${
                             data && data.meta.pagination.pageCount
                         }`}</span>
 
