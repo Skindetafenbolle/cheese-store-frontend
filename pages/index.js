@@ -5,7 +5,7 @@ import { fetchDataFromApi } from "@/utils/api";
 import { useEffect, useState } from "react";
 
 export default function Home({ products }) {
-    
+
     return (
         <main>
             <HeroBanner />
@@ -16,8 +16,8 @@ export default function Home({ products }) {
                         Выберите себе сыр по вкусу!
                     </div>
                     <div className="text-md md:text-xl">
-                        Большое количество сыров на ваш выбор, 
-                        по приятной цене и с доставкой 
+                        Большое количество сыров на ваш выбор,
+                        по приятной цене и с доставкой
                         (Поддержка Яндекс Еда)
                     </div>
                 </div>
@@ -44,7 +44,6 @@ export default function Home({ products }) {
         </main>
     );
 }
-
 export async function getStaticProps() {
     const products = await fetchDataFromApi("/api/products?populate=*");
 

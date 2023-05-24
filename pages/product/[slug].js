@@ -100,11 +100,11 @@ const ProductDetails = ({ product, products }) => {
                                         <div className='inline-block'>
                                             Жиры
                                         </div>
-                                        <div className='float-right'> {p.jiri}</div> <br/>
+                                        <div className='float-right'> {p.fats}</div> <br/>
                                         <div className='inline-block'>
-                                            Углеводы
+                                            Энергетическая ценность
                                         </div>
-                                        <div className='float-right'> {p.yglevodi}</div>
+                                        <div className='float-right'> {p.energy}ккал/{p.energy1}кДж</div>
 
                                     </div>
                                 </div>
@@ -120,15 +120,14 @@ const ProductDetails = ({ product, products }) => {
                         <button
                             className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
                             onClick={() => {
-                                    dispatch(
-                                        addToCart({
-                                            ...product?.data?.[0],
-                                            selectedSize,
-                                            oneQuantityPrice: p.price,
-                                        })
-                                    );
-                                    notify();
-                                }
+                                dispatch(
+                                    addToCart({
+                                        ...product?.data?.[0],
+                                        oneQuantityPrice: p.price,
+                                    })
+                                );
+                                notify();
+                            }
                             }
                         >
                             Добавить в корзину

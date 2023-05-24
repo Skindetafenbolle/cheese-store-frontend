@@ -85,24 +85,24 @@ const Cart = () => {
 
                                         <input type="radio" name="input_radio" id="id-1" checked/><b>Доставка</b>
 
-                                            <div id="billing_index_field">
-                                                <div className="text-md flex justify-center font-bold text-red-500/[0.9] mb-2">Доставка только по Витебку</div>
-                                                <legend className='flex justify-center font-bold'>Адрес доставки</legend><br/>
-                                                <label> Адресс &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" required></input></label>
-                                                <br/><br/>
-                                                <label> Номер телефона&nbsp;     <input type="text" required></input></label><br/>
-                                            </div>
-                                            <br/>
-                                            <input type="radio" name="input_radio" id="id-2"/><b>Самовывоз</b>
+                                        <div id="billing_index_field">
+                                            <div className="text-md flex justify-center font-bold text-red-500/[0.9] mb-2">Доставка только по Витебку</div>
+                                            <legend className='flex justify-center font-bold'>Адрес доставки</legend><br/>
+                                            <label> Адресс &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" required/></label>
+                                            <br/><br/>
+                                            <label> Номер телефона&nbsp;     <input type="text" required/></label><br/>
+                                        </div>
+                                        <br/>
+                                        <input type="radio" name="input_radio" id="id-2"/><b>Самовывоз</b>
 
-                                                <div className="class-other-div"><label><br/> Номер телефона&nbsp;     <input type="text" required></input></label><br/><br/> <iframe
-                                                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A759df7b70c1e07b664cf1722c5a80c90b77bd09d55e8d39138b4d2862721ec19&amp;source=constructor"
-                                                    width="200" height="200" frameBorder="0">
-                                                </iframe>
-                                                    <br/>
-                                                    <b>Адрес пункта выдачи</b>: Беларусь, Витебск, ул Гагарина 85 211305
-                                                    <br/>
-                                                    <b>Время работы </b>с 08:00 до 19:00  </div>
+                                        <div className="class-other-div"><label><br/> Номер телефона&nbsp;     <input type="text" required/></label><br/><br/> <iframe
+                                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A759df7b70c1e07b664cf1722c5a80c90b77bd09d55e8d39138b4d2862721ec19&amp;source=constructor"
+                                            width="200" height="200" frameBorder="0">
+                                        </iframe>
+                                            <br/>
+                                            <b>Адрес пункта выдачи</b>: Беларусь, Витебск, ул Гагарина 85 211305
+                                            <br/>
+                                            <b>Время работы </b>с 08:00 до 19:00  </div>
 
 
 
