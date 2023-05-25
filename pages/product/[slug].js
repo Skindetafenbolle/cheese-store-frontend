@@ -155,21 +155,21 @@ const ProductDetails = ({ product, products }) => {
 
 export default ProductDetails;
 
-export async function getStaticPaths() {
-    const products = await fetchDataFromApi("/api/products?populate=*");
-    const paths = products?.data?.map((p) => ({
-        params: {
-            slug: p.attributes.slug,
-        },
-    }));
+// export async function getStaticPaths() {
+//     const products = await fetchDataFromApi("/api/products?populate=*");
+//     const paths = products?.data?.map((p) => ({
+//         params: {
+//             slug: p.attributes.slug,
+//         },
+//     }));
+//
+//     return {
+//         paths,
+//         fallback: false,
+//     };
+// }
 
-    return {
-        paths,
-        fallback: false,
-    };
-}
-
-export async function getStaticProps({ params: { slug } }) {
+export async function getServerSideProps({ params: { slug } }) {
     const product = await fetchDataFromApi(
         `/api/products?populate=*&filters[slug][$eq]=${slug}`
     );
