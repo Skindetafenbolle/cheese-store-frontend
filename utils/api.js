@@ -12,7 +12,9 @@ export const fetchDataFromApi = async (endpoint) => {
     const data = await res.json();
 
     return data;
-};
+};//два новых метода для пуша даты
+
+
 
 export const makePaymentRequest = async (endpoint, payload) => {
     const res = await fetch(`${API_URL}${endpoint}`, {

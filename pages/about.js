@@ -1,10 +1,4 @@
-import HeroBanner from "@/components/HeroBanner";
-import ProductCard from "@/components/ProductCard";
-import Wrapper from "@/components/Wrapper";
-import { fetchDataFromApi } from "@/utils/api";
-import { useEffect, useState } from "react";
-
-export default function Home({ products }) {
+export default function About() {
 
     return (
         <div className="text-center max-w-[800px] mx-auto my-[50px] md:my-[80px]">

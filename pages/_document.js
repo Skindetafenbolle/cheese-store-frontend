@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
+        <script src="//code.jivo.ru/widget/TI8Ni1jiTX" async></script>
       <body>
         <Main />
         <NextScript />
