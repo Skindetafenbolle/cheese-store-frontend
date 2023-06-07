@@ -4,9 +4,9 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-
 import { Provider } from "react-redux";
 import store from "@/store/store";
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 
 export default function App({ Component, pageProps }) {
     return (
@@ -34,10 +34,16 @@ export default function App({ Component, pageProps }) {
                 />
             </Head>
             <Provider store={store}>
+                <UserProvider>
+
                 <Header />
                 <Component {...pageProps} />
                 <Footer />
+                </UserProvider>
             </Provider>
+
+            
+
         </>
     );
 }

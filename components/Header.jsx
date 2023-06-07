@@ -4,14 +4,18 @@ import Wrapper from "./Wrapper";
 import Link from "next/link";
 import Menu from "./Menu";
 import MenuMobile from "./MenuMobile";
-
-import { IoMdHeartEmpty } from "react-icons/io";
 import { BsCart } from "react-icons/bs";
-import {BiLogIn} from "react-icons/bi";
 import { BiMenuAltRight } from "react-icons/bi";
 import { VscChromeClose } from "react-icons/vsc";
 import { fetchDataFromApi } from "@/utils/api";
 import { useSelector } from "react-redux";
+import Button from "./Button";
+import { useUser } from '@auth0/nextjs-auth0/client';
+import { BsFillPersonFill } from "react-icons/bs";
+
+
+
+
 const Header = () => {
     const [mobileMenu, setMobileMenu] = useState(false);
     const [showCatMenu, setShowCatMenu] = useState(false);
@@ -50,9 +54,28 @@ const Header = () => {
         setCategories(data);
     };
 
+    const { user, error, isLoading } = useUser();
 
+    // you can use the error and loading state to show an error message or a loading spinner while loading.
+    if (isLoading) {
+      return (
+        <div className="text-5xl font-semibold text-center text-indigo-600">
+          ...loading{" "}
+        </div>
+      );
+    }
+  
+    if(error){
+      return (
+        <div className="text-5xl font-semibold text-center text-indigo-600">
+          {error.message}
+        </div>
+      )
+    }
+   
     return (
-        <header
+        
+        <header 
             className={`w-full h-[50px] md:h-[80px] bg-white flex items-center justify-between z-20 sticky top-0 transition-transform duration-300 ${show}`}
         >
             <Wrapper className="h-[60px] flex justify-between items-center">
@@ -75,31 +98,38 @@ const Header = () => {
                     />
                 )}
 
+                        {/* <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center cursor-pointer relative">
+                            {/* <Link href='/customerPage'>
+                            
+                            {user && (
+                                <p className="text-[15px] md:text-[20px]">
+                                    {user.name}
+                                </p>
+                                )}
+                                {!user && (
+                                <p className="text-[15px] md:text-[20px]">Гость</p>
+                                )}
+                            </Link> */}
+                        {/* </div> */} 
+
                 <div className="flex items-center gap-2 text-black">
-                    {/* Icon start */}
-                    {/*        <Link href='/wishlist'>*/}
-                    {/*        <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">*/}
-                    {/*            <IoMdHeartEmpty className="text-[19px] md:text-[24px]" />*/}
-                    {/*            <div className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-600 absolute top-1 left-5 md:left-7 text-white text-[10px] md:text-[12px] flex justify-center items-center px-[2px] md:px-[5px]">*/}
-                    {/*                51*/}
-                    {/*            </div>*/}
-                    {/*        </div>*/}
+                       
 
-                    {/*</Link>*/}
-
-
-                    {/* Icon start */}
-                    <Link href="/auth">
-                        <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
-                            <BiLogIn className="text-[15px] md:text-[20px]" />
-                            {cartItems.length > 0 && (
-                                <div className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-600 absolute top-1 left-5 md:left-7 text-white text-[10px] md:text-[12px] flex justify-center items-center px-[2px] md:px-[5px]">
-                                    {cartItems.length}
-                                </div>
-                            )}
+                    <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center cursor-pointer relative">
+                    {!user ? (
+                            <Button type="Войти" url="/api/auth/login" />
+                        ) : (
+                            <div className="flex justify-center items-center space-x-4 mr-10">
+                                <Link href="/customerPage">
+                                <BsFillPersonFill className="text-[15px] md:text-[20px]" />
+                                </Link>
+                            <Button type="Выйти" url="/api/auth/logout" />
+                           
+                            </div>
+                        )}
                         </div>
-                    </Link>
-                    {/* Icon end */}
+
+             
                     <Link href="/cart">
                         <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
                             <BsCart className="text-[15px] md:text-[20px]" />

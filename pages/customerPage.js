@@ -1,13 +1,11 @@
 import React from 'react';
 import Image from "next/image";
+import Profile from '@/components/profile';
 
 
-const CustomerPage = ({user, users}) => {
-    const p = users?.data?.[0]
+const CustomerPage = () => {
     return (
-        <div>
-            Личная страница
-        </div>
+       <Profile/>
     );
 }
 
