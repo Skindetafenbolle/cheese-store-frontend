@@ -2,15 +2,8 @@ import React from 'react';
 import { useUser } from '@auth0/nextjs-auth0/client';
 
 export default function Profile() {
-  const { user, error, isLoading } = useUser();
+  const { user } = useUser();
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>{error.message}</div>;
-  <div className='ml-20 size'>
-  <img src={user.picture} alt={user.name} /><b>Аватар</b> <br /><br />
-  <h2>Никнейм {user.name}</h2>
-  <p>Почта {user.email}</p>
-</div>
   return (
       user && (
         <div className="w-full md:py-20">

@@ -54,25 +54,8 @@ const Header = () => {
         setCategories(data);
     };
 
-    const { user, error, isLoading } = useUser();
+    const { user } = useUser();
 
-    // you can use the error and loading state to show an error message or a loading spinner while loading.
-    if (isLoading) {
-      return (
-        <div className="text-5xl font-semibold text-center text-indigo-600">
-          ...loading{" "}
-        </div>
-      );
-    }
-  
-    if(error){
-      return (
-        <div className="text-5xl font-semibold text-center text-indigo-600">
-          {error.message}
-        </div>
-      )
-    }
-   
     return (
         
         <header 
@@ -97,20 +80,6 @@ const Header = () => {
                         categories={categories}
                     />
                 )}
-
-                        {/* <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center cursor-pointer relative">
-                            {/* <Link href='/customerPage'>
-                            
-                            {user && (
-                                <p className="text-[15px] md:text-[20px]">
-                                    {user.name}
-                                </p>
-                                )}
-                                {!user && (
-                                <p className="text-[15px] md:text-[20px]">Гость</p>
-                                )}
-                            </Link> */}
-                        {/* </div> */} 
 
                 <div className="flex items-center gap-2 text-black">
                        
