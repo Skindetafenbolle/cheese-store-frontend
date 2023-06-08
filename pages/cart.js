@@ -81,33 +81,6 @@ const Cart = () => {
                                     <div className="text-sm md:text-md py-5 border-t mt-5">
                                         Это сумма которая включает в себя только оплату товара которой вы покупаете, без процентов, доставки и налогов
                                     </div>
-                                    {/*<div className="text-sm md:text-md py-5 border-t mt-5">*/}
-
-                                    {/*    <input type="radio" name="input_radio" id="id-1" checked/><b>Доставка</b>*/}
-
-                                    {/*    <div id="billing_index_field">*/}
-                                    {/*        <div className="text-md flex justify-center font-bold text-red-500/[0.9] mb-2">Доставка только по Витебку</div>*/}
-                                    {/*        <legend className='flex justify-center font-bold'>Адрес доставки</legend><br/>*/}
-                                    {/*        <label> Адресс &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" required/></label>*/}
-                                    {/*        <br/><br/>*/}
-                                    {/*        <label> Номер телефона&nbsp;     <input type="text" required/></label><br/>*/}
-                                    {/*    </div>*/}
-                                    {/*    <br/>*/}
-                                    {/*    <input type="radio" name="input_radio" id="id-2"/><b>Самовывоз</b>*/}
-
-                                    {/*    <div className="class-other-div"><label><br/> Номер телефона&nbsp;     <input type="text" required/></label><br/><br/> <iframe*/}
-                                    {/*        src="https://yandex.ru/map-widget/v1/?um=constructor%3A759df7b70c1e07b664cf1722c5a80c90b77bd09d55e8d39138b4d2862721ec19&amp;source=constructor"*/}
-                                    {/*        width="200" height="200" frameBorder="0">*/}
-                                    {/*    </iframe>*/}
-                                    {/*        <br/>*/}
-                                    {/*        <b>Адрес пункта выдачи</b>: Беларусь, Витебск, ул Гагарина 85 211305*/}
-                                    {/*        <br/>*/}
-                                    {/*        <b>Время работы </b>с 08:00 до 19:00  </div>*/}
-
-
-
-
-                                    {/*</div>*/}
                                 </div>
 
                                 {/* BUTTON START */}
@@ -129,12 +102,6 @@ const Cart = () => {
                 {/* This is empty screen */}
                 {cartItems.length < 1 && (
                     <div className="flex-[2] flex flex-col items-center pb-[50px] md:-mt-14">
-                        {/* <Image
-                            src="public/assets/empty-cart.png"
-                            width={300}
-                            height={300}
-                            className="w-[300px] md:w-[400px]"
-                        /> */}
                         <img className="w-[300px] md:w-[400px]" src="../assets/empty-cart.png"/>
                         <span className="text-xl font-bold">
                             Ваша корзина пуста
