@@ -29,16 +29,7 @@ export default function Home({ products }) {
                     {products?.data?.map((product) => (
                         <ProductCard key={product?.id} data={product} />
                     ))}
-                    {/* {products?.data[0]} */}
-                    {/* <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard /> */}
+                    
                 </div>
                 {/* products grid end */}
             </Wrapper>

@@ -13,7 +13,9 @@ const Footer = () => {
                     {/* MENU START */}
                     <div className="flex flex-col gap-3 shrink-0">
                         <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
-                            Найти в магазине
+                            <Link href='https://sputnik.by/product_syr/'>
+                                Найти в магазине
+                            </Link> 
                         </div>
                         <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
                             Вакансии
