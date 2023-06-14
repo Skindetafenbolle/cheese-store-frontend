@@ -36,15 +36,15 @@ const Menu = ({showCatMenu, setShowCatMenu, categories}) => {
                                         {categories?.map(
                                             ({ attributes: c, id }) => {
                                                 return (
-                                                    <Link
-                                                        key={id}
-                                                        href={`/category/${c.slug}`}
-                                                        onClick={() =>
-                                                            setShowCatMenu(
-                                                                false
-                                                            )
-                                                        }
-                                                    >
+                                                <Link
+                                                    key={id}
+                                                    href={`/category/${c.slug}`}
+                                                    onClick={() =>
+                                                        setShowCatMenu(
+                                                            false
+                                                        )
+                                                    }
+                                                >
                                                         <li className="h-12 flex justify-between items-center px-3 hover:bg-black/[0.03] rounded-md">
                                                             {c.name}
                                                             <span className="opacity-50 text-sm">
