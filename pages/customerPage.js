@@ -4,9 +4,9 @@ import Profile from '@/components/profile';
 
 
 const CustomerPage = () => {
-    return (
-       <Profile/>
-    );
+return (
+<Profile/>
+);
 }
 
 export default CustomerPage;

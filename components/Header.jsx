@@ -59,8 +59,8 @@ const Header = () => {
     // you can use the error and loading state to show an error message or a loading spinner while loading.
     if (isLoading) {
       return (
-        <div className="text-5xl font-semibold text-center text-indigo-600">
-          ...loading{" "}
+        <div className="text-5xl font-semibold text-center text-black">
+          ...загрузка{" "}
         </div>
       );
     }

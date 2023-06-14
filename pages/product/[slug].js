@@ -26,7 +26,7 @@ const ProductDetails = ({ product, products }) => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "dark",
+            theme: "dark",  
         });
     };
 
@@ -58,7 +58,7 @@ const ProductDetails = ({ product, products }) => {
                             <p className="mr-2 text-lg font-semibold">
                                 {p.price}BYN;
                             </p>
-                            {p.original_price && (
+                            {p.original_price && ( 
                                 <>
                                     <p className="text-base  font-medium line-through">
                                         {p.original_price}BYN;

@@ -2,15 +2,8 @@ import React from 'react';
 import { useUser } from '@auth0/nextjs-auth0/client';
 
 export default function Profile() {
-  const { user, error, isLoading } = useUser();
+  const { user } = useUser();
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>{error.message}</div>;
-  <div className='ml-20 size'>
-  <img src={user.picture} alt={user.name} /><b>Аватар</b> <br /><br />
-  <h2>Никнейм {user.name}</h2>
-  <p>Почта {user.email}</p>
-</div>
   return (
       user && (
         <div className="w-full md:py-20">
@@ -19,9 +12,9 @@ export default function Profile() {
                         </div>
             <div className="flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px]">
 
-                <div className="w-full md:w-auto flex-[1.5] max-w-[500px] lg:max-w-full mx-auto lg:mx-0">
+                <div className="w-full md:w-auto flex-[1.5] max-w-[50px] lg:max-w-full mx-auto lg:mx-0">
                 
-                <img src={user.picture} alt={user.name} />   
+                <img className="md:w-[250px]" src={user.picture} alt={user.name} />   
                
 
                     {/* PRODUCT SUBTITLE */}
