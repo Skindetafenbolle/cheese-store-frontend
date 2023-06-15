@@ -56,6 +56,13 @@ export default function Home({ products }) {
         <br/>
         Ваши вопросы, предложения и комментарии Вы можете отправлять по адресу: cheese-store.com
 </b>
+<iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A759df7b70c1e07b664cf1722c5a80c90b77bd09d55e8d39138b4d2862721ec19&amp;source=constructor"
+                width="800" height="400" frameBorder="0">
+            </iframe>
+            <b>Адрес пункта выдачи</b>: Беларусь, Витебск, ул Гагарина 85 211305
+            <br/>
+            <b>Время работы </b>с 08:00 до 19:00
 
 
             </div>

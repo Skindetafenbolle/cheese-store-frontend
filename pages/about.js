@@ -6,16 +6,45 @@ export default function About() {
                 О нас
             </div>
             <div className="text-md md:text-xl">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est fugiat laudantium molestias quasi quisquam quo sed sunt ullam! Aliquid amet aperiam architecto asperiores commodi consequatur, consequuntur debitis dignissimos dolore doloremque eius, est ex illum ipsum iste labore libero perspiciatis, quam quas quis reprehenderit repudiandae sunt tenetur ullam vel! Adipisci, amet.
+               <h3>
+                
+                 <b>Миссия:</b> <br/>
+                </h3>
+                Помогаем улучшить качество жизни жителей Беларуси, предлагая наилучшие цены и тщательно продуманный ассортимент товаров.
+                <br/>
+                <b> <p>
+                Клиент — приоритет №1 
+                </p>
+                </b>
+
+Приоритетом сети магазинов «Белорусские сыры» является работа с покупателем, обеспечение широкого ассортимента, удовлетворяющего потребности жителей Беларуси, установление доступных цен и развитие программ лояльности.
+
+<b><p>
+
+Честность и справедливость
+</p>
+</b>
+
+Мы честны с покупателями и партнерами. Мы выполняем свои обещания и берем ответственность за свои решения.
+
+<b><p>
+Работа на 110% 
+</p>
+
+</b>
+
+Мы используем в своей работе передовые технологии и знания, наши сотрудники — уверенные в себе профессионалы.
+
+<b>x<p>
+
+Стандарты качества
+</p>
+</b>
+
+Все магазины сети работают по единому стандарту обслуживания: вне зависимости от размера или географического положения торгового объекта. С самого момента своего основания "Белорусские сыры" является для покупателя сетью, предлагающей наиболее выгодные цены на свой ассортимент, что неоднократно подтверждалось республиканскими и международными исследовательскими компаниями.
             </div>
             <br/>
-            <iframe
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3A759df7b70c1e07b664cf1722c5a80c90b77bd09d55e8d39138b4d2862721ec19&amp;source=constructor"
-                width="800" height="400" frameBorder="0">
-            </iframe>
-            <b>Адрес пункта выдачи</b>: Беларусь, Витебск, ул Гагарина 85 211305
-            <br/>
-            <b>Время работы </b>с 08:00 до 19:00
+            
         </div>
     );
 }

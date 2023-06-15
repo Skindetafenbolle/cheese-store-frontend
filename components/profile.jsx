@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useUser } from '@auth0/nextjs-auth0/client';
+// const axios = require("axios").default;
+
 
 export default function Profile() {
   const { user } = useUser();
@@ -14,12 +16,14 @@ export default function Profile() {
 
                 <div className="w-full md:w-auto flex-[1.5] max-w-[50px] lg:max-w-full mx-auto lg:mx-0">
                 
-                <img className="md:w-[250px]" src={user.picture} alt={user.name} />   
-               
-
+                    <div>
+                        <img className="md:w-[250px]" src={user.picture} alt={user.name} />   
+                    </div>
                     {/* PRODUCT SUBTITLE */}
-                    <div className="text-lg font-semibold mb-5">
-                        Имя: {user.name}
+                    <div className="text-lg font-semibold mb-5 lext-left">
+                        Имя: {user.name} 
+                        
+
                     </div>
 
                     {/* PRODUCT PRICE */}
@@ -43,7 +47,6 @@ export default function Profile() {
                             
                         )}
                     </div>
-
                 <br />
                 <br />
                 <br />
@@ -54,12 +57,8 @@ export default function Profile() {
                 <br />
                 <br />
                 </div>
-               
-                
-                 </div>
-                          
-                     
-    </div>
+                </div>
+                </div>
       )
   );
 }
