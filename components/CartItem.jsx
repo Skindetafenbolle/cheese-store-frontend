@@ -44,7 +44,7 @@ const CartItem = ({ data }) => {
 
                     {/* PRODUCT PRICE */}
                     <div className="text-sm md:text-md font-bold text-black/[0.5] mt-2">
-                        {p.price}rub;
+                        {(p.price).toFixed(2)}rub;
                     </div>
                 </div>
 
